@@ -39,6 +39,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: upstream
+          file: Dockerfile
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ github.actor }}/${{ env.IMAGE_NAME }}:latest
